@@ -2,6 +2,17 @@
 
 ![Imagem de Capa do Projeto](./github/Capa.png)
 
+---
+* [Descrição](#Descrição)
+* [Principais Tecnologias Utilizadas](#Principais-Tecnologias-Utilizadas)
+* [Clonar e Rodar Localmente](#Clonar-e-Rodar-Localmente)
+  * [Requisitos](#Requisitos)
+  * [Clone do projeto](#Clone-do-projeto)
+  * [Configuração servidor node](#Configuração-servidor-node)
+  * [Configuração aplicação web](#Configuração-aplicação-web)
+  * [Configuração app mobile](#Configuração-app-mobile)
+---
+
 ## Descrição
 
 ### Finalidade
@@ -52,6 +63,7 @@ Com o intuito de agregar conhecimento prático em cima de algumas das tecnologia
  ### Requisitos
  - [Git](https://git-scm.com/) instalado.
  - [Node.JS](https://nodejs.org/en/) **v18** ou superior instalado.
+ - Acesso a um smartphone com o app [Expo Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US) ou [Expo IOS](https://apps.apple.com/us/app/expo-go/id982107779) instalado ou um emulador.
 
  ### Clone
 
@@ -82,3 +94,37 @@ Através de um editor de código de sua preferência, siga os seguntes passos:
 Renomeie o arquivo .env.example para .env e a URL de coneção do seu banco de dados relacional em `DATABASE_URL` caso tenha preferência por outro banco que não o SQLite.
 
 Ainda no mesmo arquivo .env, na variável `JWT_SECRET` escolha uma chave secreta para a sua aplicação caso prefira, senão ainda é possível manter a chave padrão de exemplo.
+
+### Configuração aplicação web
+
+Entrar na pasta e instalar pacotes do node:
+```
+#A partir da raiz do projeto:
+$ cd web
+
+$ npm install
+```
+
+Rodar aplicação:
+```
+$ npm run dev
+```
+
+### Configuração app mobile
+
+Entrar na pasta e instalar pacotes do node:
+```
+#A partir da raiz do projeto:
+$ cd mobile
+
+$ npm install
+```
+
+Rodar Bundling e sincronizar com expo do smartphone:
+```
+$ npx expo start
+```
+
+Em seguida abra o app Expo e adicione o link exibido no terminal ou acesse com o leitor de QRCode.
+
+Caso necessário pressione a tecla R no terminal para dar refresh no app.
